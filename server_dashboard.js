@@ -382,12 +382,8 @@ function findCloudflared() {
 
     const found = candidates.find(candidate => existsSync(candidate));
 
-    if (!found) {
 if (process.env.RENDER) return "/bin/true";
 throw new Error("cloudflared.exe not found. Put cloudflared.exe beside Start Avatar Rating Studio.bat.");
-        );
-    }
-
     return found;
 }
 
